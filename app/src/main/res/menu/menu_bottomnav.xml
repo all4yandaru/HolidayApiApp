@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_bottomnav_api"
+        android:icon="@drawable/holiday_vector"
+        android:title="Holiday"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_bottomnav_database"
+        android:icon="@drawable/database_vector"
+        android:title="My Holiday Notes"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_bottomnav_profile"
+        android:icon="@drawable/contact_vector"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+
+</menu>
