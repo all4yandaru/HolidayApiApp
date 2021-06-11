@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".view.fragment.HolidayApiFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_month"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Holiday API Fragment" />
+        tools:listitem="@layout/month_layout" />
 
 </FrameLayout>
