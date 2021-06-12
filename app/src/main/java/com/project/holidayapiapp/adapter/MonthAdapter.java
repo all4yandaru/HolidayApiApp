@@ -57,7 +57,7 @@ public class MonthAdapter extends RecyclerView.Adapter<MonthAdapter.ViewHolder> 
         void bind(final ApiByMonth data){
             tvMonth.setText(data.getName());
             cvMonth.setBackgroundResource(data.getImage());
-
+ 
         }
     }
 }
