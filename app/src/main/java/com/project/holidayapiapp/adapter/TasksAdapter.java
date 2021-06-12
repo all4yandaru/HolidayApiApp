@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.project.holidayapiapp.R;
 import com.project.holidayapiapp.model.Task;
 import com.project.holidayapiapp.view.activity.HomeActivity;
+import com.project.holidayapiapp.view.activity.UpdateTask;
 
 import java.util.List;
 
@@ -61,6 +62,12 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHol
 
         @Override
         public void onClick(View view) {
+            Task task = taskList.get(getBindingAdapterPosition());
+
+            Intent intent = new Intent(mCtx, UpdateTask.class);
+            intent.putExtra("task", task);
+
+            mCtx.startActivity(intent);
         }
     }
 }
