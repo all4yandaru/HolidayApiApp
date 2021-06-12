@@ -37,6 +37,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHol
         holder.textViewDate.setText(t.getDate());
         holder.textViewTime.setText(t.getTime());
         holder.textViewActivity.setText(t.getActivity());
+        holder.textViewDescription.setText(t.getDescription());
     }
 
     @Override
@@ -46,7 +47,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHol
 
     class TasksViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView textViewDate, textViewTime, textViewActivity;
+        TextView textViewDate, textViewTime, textViewActivity, textViewDescription;
 
         public TasksViewHolder(View itemView) {
             super(itemView);
@@ -54,6 +55,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHol
             textViewDate = itemView.findViewById(R.id.textViewDate);
             textViewTime = itemView.findViewById(R.id.textViewTime);
             textViewActivity = itemView.findViewById(R.id.textViewActivity);
+            textViewDescription = itemView.findViewById(R.id.textViewDescription);
             itemView.setOnClickListener(this);
         }
 
