@@ -21,9 +21,6 @@ public class add_task extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
 
-
-
-
     }
     private void saveTask() {
         final String sDate = editTextDate.getText().toString().trim();

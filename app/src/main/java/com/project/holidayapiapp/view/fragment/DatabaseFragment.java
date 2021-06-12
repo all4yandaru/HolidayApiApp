@@ -22,13 +22,13 @@ public class DatabaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_database, null);
+        View root = inflater.inflate(R.layout.fragment_database, container , false);
         RecyclerView rv = (RecyclerView) root.findViewById(R.id.recyclerview_tasks);
         FloatingActionButton buttonAddTask = root.findViewById(R.id.floating_button_add);
         buttonAddTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(root.getContext(), add_task.class);
+                Intent intent = new Intent(view.getContext(), add_task.class);
                 startActivity(intent);
             }
         });
