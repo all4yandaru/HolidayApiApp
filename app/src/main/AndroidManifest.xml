@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HolidayApiApp">
+        <activity android:name=".view.activity.AddTask"></activity>
         <activity android:name=".view.activity.HomeActivity" />
         <activity android:name=".view.activity.MainActivity">
             <intent-filter>

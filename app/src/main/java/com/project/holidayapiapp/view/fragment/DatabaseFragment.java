@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.project.holidayapiapp.R;
+import com.project.holidayapiapp.view.activity.AddTask;
 
 public class DatabaseFragment extends Fragment {
 
@@ -24,6 +25,14 @@ public class DatabaseFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_database, container , false);
         RecyclerView rv = (RecyclerView) root.findViewById(R.id.recyclerview_tasks);
         FloatingActionButton buttonAddTask = root.findViewById(R.id.floating_button_add);
+        buttonAddTask = root.findViewById(R.id.floating_button_add);
+        buttonAddTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), AddTask.class);
+                startActivity(intent);
+            }
+        });
         return root;
     }
 
