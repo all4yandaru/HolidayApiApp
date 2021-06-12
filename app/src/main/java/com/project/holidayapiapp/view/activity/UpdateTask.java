@@ -37,6 +37,14 @@ public class UpdateTask extends AppCompatActivity {
         editTextTime.setText(task.getTime());
         editTextActivity.setText(task.getActivity());
         editTextDescription.setText(task.getDescription());
+        buttonDelete = findViewById(R.id.button_delete);
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                taskDAO.deleteData(task);
+                finish();
+            }
+        });
         buttonUpdate = findViewById(R.id.button_update);
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
