@@ -17,28 +17,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Input"
+            android:text="Input Jadwal"
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
 
         <EditText
-            android:id="@+id/editTextTask"
+            android:id="@+id/editTextDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal" />
 
         <EditText
-            android:id="@+id/editTextDesc"
+            android:id="@+id/editTextTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Pemasukkan"
+            android:hint="Jam"
             android:inputType="number"/>
 
         <EditText
-            android:id="@+id/editTextFinishBy"
+            android:id="@+id/editTextActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Pengeluaran"
+            android:hint="Kegiatan"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi"
             android:inputType="number"/>
 
         <Button
