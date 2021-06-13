@@ -33,10 +33,10 @@ public class ApiByMonthData {
             R.drawable.june,
             R.drawable.july,
             R.drawable.august,
-            R.drawable.september,
+            R.drawable.sepember,
             R.drawable.october,
             R.drawable.november,
-            R.drawable.desember
+            R.drawable.december
     };
 
     public static ArrayList<ApiByMonth> getListData(){
