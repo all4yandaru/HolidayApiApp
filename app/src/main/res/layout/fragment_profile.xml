@@ -54,6 +54,14 @@
                 android:textColor="#8b8b8b"
                 android:textStyle="bold"/>
 
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/short_qoute"
+                android:layout_toRightOf="@+id/cardview_image"
+                android:text="FOLLOW ME ON INSTAGRAM"/>
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -107,6 +115,14 @@
                 android:text="In Reality, When You Stab Somebody, They Lose Blood Pressure And They Leak To Death, Very Slowly. - Edmund Kemperd"
                 android:textColor="#8b8b8b"
                 android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/short_qoute1"
+                android:layout_toRightOf="@+id/cardview_image1"
+                android:text="WATCH MY STREAM ON TWITCH"/>
 
         </RelativeLayout>
 
