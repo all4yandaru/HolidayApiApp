@@ -7,9 +7,18 @@
     tools:context=".view.activity.MainActivity">
 
     <ImageView
+        android:id="@+id/iv_logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:layout_centerInParent="true"
         android:src="@drawable/holiday" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/iv_logo"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets5.lottiefiles.com/packages/lf20_asfhj9ya.json" />
 
 </RelativeLayout>

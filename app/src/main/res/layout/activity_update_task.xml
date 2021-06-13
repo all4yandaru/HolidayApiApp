@@ -21,32 +21,36 @@
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
 
-        <EditText
-            android:id="@+id/editTextDate"
+        <TextView
+            android:id="@+id/textViewDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tanggal" />
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="8dp"
+            android:text="Klik untuk pilih tanggal"
+            android:textSize="15sp"
+            android:textStyle="italic" />
 
         <EditText
             android:id="@+id/editTextTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Jam"
-            android:inputType="number"/>
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editTextActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Kegiatan"
-            android:inputType="number"/>
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editTextDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Keterangan"
-            android:inputType="number"/>
+            android:inputType="number" />
 
         <Button
             android:id="@+id/button_update"
