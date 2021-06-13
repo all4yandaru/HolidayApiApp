@@ -14,16 +14,21 @@ import com.project.holidayapiapp.model.Task;
 import com.project.holidayapiapp.view.activity.HomeActivity;
 import com.project.holidayapiapp.view.activity.UpdateTask;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHolder> {
 
     private Context mCtx;
     private List<Task> taskList;
+    private ArrayList<Task> arrayList;
 
     public TasksAdapter(Context mCtx, List<Task> taskList) {
         this.mCtx = mCtx;
         this.taskList = taskList;
+        this.arrayList = new ArrayList<Task>();
+        this.arrayList.addAll(taskList);
     }
 
     @Override
@@ -69,5 +74,20 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.TasksViewHol
 
             mCtx.startActivity(intent);
         }
+    }
+
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        taskList.clear();
+        if (charText.length() == 0) {
+            taskList.addAll(arrayList);
+        } else {
+            for (Task wp : arrayList) {
+                if (wp.getActivity().toLowerCase(Locale.getDefault()).contains(charText)) {
+                    taskList.add(wp);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }

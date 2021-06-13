@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,12 +27,13 @@ import com.project.holidayapiapp.view.activity.AddTask;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseFragment extends Fragment {
+public class DatabaseFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private RecyclerView rv;
     private TasksAdapter tasksAdapter;
     private ArrayList<Task> listPenjualan = new ArrayList<>();
     private TaskDAO taskDAO;
+    private SearchView editSearch;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,7 +54,21 @@ public class DatabaseFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        editSearch = root.findViewById(R.id.simpleSearchView);
+        editSearch.setOnQueryTextListener(this);
         return root;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        String text = newText;
+        tasksAdapter.filter(text);
+        return false;
     }
 
     void loadData() {
