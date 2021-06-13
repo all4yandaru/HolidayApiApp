@@ -5,10 +5,111 @@
     android:layout_height="match_parent"
     tools:context=".view.fragment.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/android_card_view_example"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment" />
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/cardview_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="18dp"
+                android:src="@mipmap/profile_round" />
+
+            <TextView
+                android:id="@+id/cardview_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cardview_image"
+                android:paddingBottom="5dp"
+                android:text="Liek Allyandaru"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/short_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardview_list_title"
+                android:layout_toRightOf="@+id/cardview_image"
+                android:text="123180137"
+                android:textColor="#8b8b8b" />
+
+            <TextView
+                android:id="@+id/short_qoute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/short_description"
+                android:layout_toRightOf="@+id/cardview_image"
+                android:text="A Mobile Developer"
+                android:textColor="#8b8b8b"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/android_card_view_example1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/cardview_image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="18dp"
+                android:src="@mipmap/profile1_round" />
+
+            <TextView
+                android:id="@+id/cardview_list_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cardview_image1"
+                android:paddingBottom="5dp"
+                android:text="Demitries Baskhara"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/short_description1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardview_list_title1"
+                android:layout_toRightOf="@+id/cardview_image1"
+                android:text="123180137"
+                android:textColor="#8b8b8b" />
+
+            <TextView
+                android:id="@+id/short_qoute1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/short_description1"
+                android:layout_toRightOf="@+id/cardview_image1"
+                android:text="In Reality, When You Stab Somebody, They Lose Blood Pressure And They Leak To Death, Very Slowly. - Edmund Kemperd"
+                android:textColor="#8b8b8b"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>
