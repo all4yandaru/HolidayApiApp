@@ -1,4 +1,4 @@
-package com.project.holidayapiapp.model;
+package com.project.holidayapiapp.model.api;
 
 import com.project.holidayapiapp.R;
 

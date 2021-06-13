@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 
 import com.project.holidayapiapp.R;
 import com.project.holidayapiapp.adapter.MonthAdapter;
-import com.project.holidayapiapp.model.ApiByMonth;
-import com.project.holidayapiapp.model.ApiByMonthData;
+import com.project.holidayapiapp.model.api.ApiByMonth;
+import com.project.holidayapiapp.model.api.ApiByMonthData;
 
 import java.util.ArrayList;
 
@@ -43,7 +43,7 @@ public class HolidayApiFragment extends Fragment {
         monthAdapter = new MonthAdapter(apiByMonthArrayList);
 
         rvMonth.setHasFixedSize(true);
-        rvMonth.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        rvMonth.setLayoutManager(new LinearLayoutManager(getContext()));
         rvMonth.setAdapter(monthAdapter);
     }
 }

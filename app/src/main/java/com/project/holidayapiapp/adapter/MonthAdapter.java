@@ -1,6 +1,7 @@
 package com.project.holidayapiapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +9,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.holidayapiapp.R;
-import com.project.holidayapiapp.model.ApiByMonth;
-import com.squareup.picasso.Picasso;
+import com.project.holidayapiapp.model.api.ApiByMonth;
+import com.project.holidayapiapp.view.activity.HolidayActivity;
 
 import java.util.ArrayList;
 
@@ -57,6 +57,15 @@ public class MonthAdapter extends RecyclerView.Adapter<MonthAdapter.ViewHolder> 
         void bind(final ApiByMonth data){
             tvMonth.setText(data.getName());
             cvMonth.setBackgroundResource(data.getImage());
+
+            cvMonth.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, HolidayActivity.class);
+                    i.putExtra(HolidayActivity.EXTRA_DATA, data);
+                    context.startActivity(i);
+                }
+            });
  
         }
     }

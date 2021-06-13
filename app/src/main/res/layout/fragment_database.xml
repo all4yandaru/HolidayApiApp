@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:backgroundTint="@color/white"
-        android:src="@drawable/ic_add_background"
+        android:src="@drawable/add_vector"
         android:tint="@color/white"
         app:fabSize="normal"
         android:layout_gravity="bottom|right"

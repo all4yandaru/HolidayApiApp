@@ -1,4 +1,4 @@
-package com.project.holidayapiapp.model;
+package com.project.holidayapiapp.model.api;
 
 import android.os.Parcel;
 import android.os.Parcelable;

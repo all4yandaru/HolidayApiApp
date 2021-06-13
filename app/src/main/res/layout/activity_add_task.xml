@@ -37,15 +37,13 @@
             android:id="@+id/editTextActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Kegiatan"
-            android:inputType="number"/>
+            android:hint="Kegiatan"/>
 
         <EditText
             android:id="@+id/editTextDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Deskripsi"
-            android:inputType="number"/>
+            android:hint="Deskripsi"/>
 
         <Button
             android:id="@+id/button_save"
