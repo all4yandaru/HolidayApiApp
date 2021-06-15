@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.project.holidayapiapp.R;
@@ -28,6 +29,7 @@ public class HolidayActivity extends AppCompatActivity {
     HolidayViewModel holidayViewModel;
 
     TextView tvMonthName;
+    ImageView ivMonth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,9 @@ public class HolidayActivity extends AppCompatActivity {
         apiByMonth = getIntent().getParcelableExtra(EXTRA_DATA);
         tvMonthName = findViewById(R.id.tv_month_name);
         tvMonthName.setText(apiByMonth.getName());
+
+        ivMonth = findViewById(R.id.iv_month);
+        ivMonth.setImageResource(apiByMonth.getImage());
 
         apiAdapter = new ApiAdapter(this);
         apiAdapter.notifyDataSetChanged();
